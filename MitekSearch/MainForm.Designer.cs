@@ -292,7 +292,7 @@
             this.lblFromDate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblFromDate.Location = new System.Drawing.Point(177, 4);
             this.lblFromDate.Name = "lblFromDate";
-            this.lblFromDate.Size = new System.Drawing.Size(62, 14);
+            this.lblFromDate.Size = new System.Drawing.Size(66, 14);
             this.lblFromDate.TabIndex = 19;
             this.lblFromDate.Text = "From Date:";
             // 
@@ -474,7 +474,7 @@
             this.lblToDate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblToDate.Location = new System.Drawing.Point(310, 4);
             this.lblToDate.Name = "lblToDate";
-            this.lblToDate.Size = new System.Drawing.Size(47, 14);
+            this.lblToDate.Size = new System.Drawing.Size(51, 14);
             this.lblToDate.TabIndex = 27;
             this.lblToDate.Text = "To Date:";
             // 
@@ -524,7 +524,7 @@
             this.MinimumSize = new System.Drawing.Size(850, 611);
             this.Name = "MainForm";
             this.RightToLeftLayout = true;
-            this.Text = "Mitek Transaction Search";
+            this.Text = "Mitek Transaction Search v2.1";
             ((System.ComponentModel.ISupportInitialize)(this.pbImage1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage3)).EndInit();
