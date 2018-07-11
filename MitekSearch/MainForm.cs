@@ -12,10 +12,14 @@
 #
 # Version:
 #
+#   2.1.0   - 07/##/2018 -  Fixed MiSnap Window Displaying when MiSnap 
+#                               Transaction was active but not clicked on.
+#                           Fixed Image Save Path to not append every viewed
+#                               Transaction.
+#                           
 #   2.0.0   - 12/29/2016 -  Refactoring Code
 #                           Read from encrypted config File (BPConfigApp)
 #                           Search Date Range added
-#
 #   1.2.0   - ##/##/#### -  NEVER RELEASED! 
 #                           Is MySnap?
 #                           re-Compile for .NET 4
@@ -84,6 +88,7 @@ namespace MitekSearch {
         private void btnSearch_Click(object sender, EventArgs e) {
             Cursor = Cursors.WaitCursor; // change cursor to hourglass type
             setVisibility(appState.Search);
+
             getTransactions();
             Cursor = Cursors.Arrow; // change cursor to normal type
         }
@@ -301,6 +306,8 @@ namespace MitekSearch {
                     break;
                 case appState.Search:
                     // Search Complete, enable GetImages btn
+                    imageFilePath = _confSet.GetValue("ImageOutPath");
+                    // Reset File Path to save images to.
                     dtFrom.Enabled = true;
                     btnCopyDate.Enabled = true;
                     dtTo.Enabled = true;
@@ -602,7 +609,7 @@ namespace MitekSearch {
 
         }
 
-        private void rbMySnap_Click(object sender, EventArgs e) {
+        private void rbMySnap_MouseClick(object sender, EventArgs e) {
             string sqlCommandString = @"SELECT [MiSnapInfoFront] , [MiSnapInfoRear]" +
                @"FROM [TransactionData] " +
                @"WHERE [MiSnapInfoFront] like 'ascii{%' and " +
@@ -638,5 +645,6 @@ namespace MitekSearch {
         private void cbOrgName_SelectionChangeCommitted(object sender, EventArgs e) {
             setVisibility(appState.Search);
         }
+
     }
 }                      

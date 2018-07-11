@@ -438,12 +438,12 @@
             this.rbMySnap.Enabled = false;
             this.rbMySnap.Location = new System.Drawing.Point(446, 120);
             this.rbMySnap.Name = "rbMySnap";
-            this.rbMySnap.Size = new System.Drawing.Size(129, 17);
+            this.rbMySnap.Size = new System.Drawing.Size(120, 17);
             this.rbMySnap.TabIndex = 24;
             this.rbMySnap.TabStop = true;
-            this.rbMySnap.Text = "MiSnap Transaction? ";
+            this.rbMySnap.Text = "MiSnap Transaction";
             this.rbMySnap.UseVisualStyleBackColor = true;
-            this.rbMySnap.Click += new System.EventHandler(this.rbMySnap_Click);
+            this.rbMySnap.MouseClick += new System.Windows.Forms.MouseEventHandler(this.rbMySnap_MouseClick);
             // 
             // dtTo
             // 
