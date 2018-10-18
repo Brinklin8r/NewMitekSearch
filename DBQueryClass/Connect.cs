@@ -32,6 +32,22 @@ namespace DBQueryClass
             return "Connected to " + _sqlInitialCatalog + "!";
         }
 
+        public string ConnectToDB( string ServerName, string DatabaseName ) {
+            _sqlInitialCatalog = DatabaseName;
+            _sqlSourceName = ServerName;
+
+            DisconnectFromDB();
+            try {
+                _objSQLConnection = new SqlConnection(
+                    _CreateSQLConnectionString() );
+                _objSQLConnection.Open();
+            } catch( Exception ex ) {
+                return "Error:  " + ex.Message.ToString();
+            }
+
+            return "Connected to " + _sqlInitialCatalog + "!";
+        }
+
         public string ConnectToDB() {
             DisconnectFromDB();
             try {

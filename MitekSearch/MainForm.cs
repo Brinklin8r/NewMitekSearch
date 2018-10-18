@@ -12,11 +12,12 @@
 #
 # Version:
 #
-#   2.1.0   - 07/##/2018 -  Fixed MiSnap Window Displaying when MiSnap 
+#   2.1.0   - ##/##/2018 -  Fixed MiSnap Window Displaying when MiSnap 
 #                               Transaction was active but not clicked on.
 #                           Fixed Image Save Path to not append every viewed
 #                               Transaction.
-#                           
+#                           Updated for Tierpoint connections
+#                           Updated Mitek IQA results DataGridViews
 #   2.0.0   - 12/29/2016 -  Refactoring Code
 #                           Read from encrypted config File (BPConfigApp)
 #                           Search Date Range added
@@ -72,14 +73,14 @@ namespace MitekSearch {
         }
 
         private void btnMainConnect_Click(object sender, EventArgs e) {
-            lblResult.Text = dbClass.ConnectToDB("MobileDeposit");
+            lblResult.Text = dbClass.ConnectToDB("SQL-IP2.AlogentCloud.Local" , "MobileDeposit");
             dgvResults.DataSource = null;
             setVisibility(appState.Connect);
             populateListBox();
         }
 
         private void btnConnectSF_Click(object sender, EventArgs e) {
-            lblResult.Text = dbClass.ConnectToDB("MobileDepositSF");
+            lblResult.Text = dbClass.ConnectToDB("SQL-IP1.AlogentCloud.Local" , "MobileDepositSF" );
             dgvResults.DataSource = null;
             setVisibility(appState.ConnectSF);
             populateListBox(true);

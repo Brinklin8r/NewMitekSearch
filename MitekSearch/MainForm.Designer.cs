@@ -337,7 +337,6 @@
             this.dgvInfo.ReadOnly = true;
             this.dgvInfo.RowHeadersVisible = false;
             this.dgvInfo.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvInfo.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgvInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvInfo.Size = new System.Drawing.Size(243, 414);
             this.dgvInfo.TabIndex = 22;
@@ -393,7 +392,6 @@
             this.dgvIQAFront.ReadOnly = true;
             this.dgvIQAFront.RowHeadersVisible = false;
             this.dgvIQAFront.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvIQAFront.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgvIQAFront.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvIQAFront.Size = new System.Drawing.Size(243, 414);
             this.dgvIQAFront.TabIndex = 23;
@@ -427,7 +425,6 @@
             this.dgvIQABack.ReadOnly = true;
             this.dgvIQABack.RowHeadersVisible = false;
             this.dgvIQABack.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvIQABack.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
             this.dgvIQABack.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvIQABack.Size = new System.Drawing.Size(243, 414);
             this.dgvIQABack.TabIndex = 24;
