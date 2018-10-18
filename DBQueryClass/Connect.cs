@@ -91,8 +91,12 @@ namespace DBQueryClass
                 _GetConfigValuse();
                 _connString += @"Data Source=" + _sqlSourceName;
                 _connString += @";Initial Catalog=" + _sqlInitialCatalog;
-                _connString += @";User ID=" + _sqlUserID;
-                _connString += @";Password =" + _sqlPassword;
+                if(_sqlUserID == "0" && _sqlPassword == "0") {
+                    _connString += ";Integrated Security=True;";
+                } else {
+                    _connString += @";User ID=" + _sqlUserID;
+                    _connString += @";Password =" + _sqlPassword;
+                }
             } catch (Exception ex) {
                 return "Error:  " + ex.Message.ToString();
             }
