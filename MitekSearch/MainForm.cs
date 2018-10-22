@@ -12,12 +12,14 @@
 #
 # Version:
 #
-#   2.1.0   - ##/##/2018 -  Fixed MiSnap Window Displaying when MiSnap 
+#   2.1.0   - 10/22/2018 -  Fixed MiSnap Window Displaying when MiSnap 
 #                               Transaction was active but not clicked on.
 #                           Fixed Image Save Path to not append every viewed
 #                               Transaction.
 #                           Updated for Tierpoint connections
 #                           Updated Mitek IQA results DataGridViews
+#                           If UN\PW == 0\0 in the Config file, the connection
+#                               string will be built to use Windows Auth.
 #   2.0.0   - 12/29/2016 -  Refactoring Code
 #                           Read from encrypted config File (BPConfigApp)
 #                           Search Date Range added
